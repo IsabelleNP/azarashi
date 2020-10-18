@@ -194,7 +194,7 @@ var level1CoffeeBonusMissions = [
     }
 ]
 
-var level1CoffeeText = "outro texto pra café"
+var level1CoffeeText = "Bom, você conhece os bodes né. É díficil não colocar tudo na boca e mastigar, mastigar, mastigar... Alguns bodes tem uma predição por um alimento ou outro; já eu, gosto de tudo. Tenho uma quedinha especial por café. Mas por incrível que pareça, não é nos grãos que eu me amarro não. Eu gosto mesmo é da bebida. Esquisito isso pra um bode, né? Mas é a vida. E a vida cobra: meus dentes já estão todos amarelos."
 
 var allCoffeeMissions = [level1CoffeeMissions]
 var allCoffeeBonusMissions = [level1CoffeeBonusMissions]
@@ -225,7 +225,7 @@ var level1ConsumerismBonusMissions = [
     }
 ]
 
-var level1ConsumerismText = "outro texto pra Consumerism"
+var level1ConsumerismText = "Como já dizia Ariana Grande “Eu vejo, eu gosto, eu quero, eu compro”, esse é meu lema de vida. Sabe, eu não sou rico, muito pelo contrário, minha vida é dever para mil e uma lojas e não, eu não me importo. A questão não é ter aquela camisa, mas sim comprar, eu adoro o ato de comprar, simplesmente amo. Infelizmente essas vontades vem me colocando em perigo, parece que não importa o quanto eu trabalhe nunca consigo o dinheiro o suficiente para me sustentar."
 
 var allConsumerismMissions = [level1ConsumerismMissions]
 var allConsumerismBonusMissions = [level1ConsumerismBonusMissions]
