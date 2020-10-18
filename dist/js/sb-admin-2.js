@@ -201,6 +201,37 @@ var allCoffeeBonusMissions = [level1CoffeeBonusMissions]
 var allCoffeeLevelTexts = [level1CoffeeText]
 
 
+var level1ConsumerismMissions = [
+    {
+        id: 1,
+        mission: "Faça um planejamento financeiro para cada semana desse mês.",
+        checkboxText: "Planejado!",
+        coins: 5
+    },
+    {
+        id: 2,
+        mission: "Antes de sair de casa faça a lista de compras, planeje exatamente o que vai comprar e siga essa lista.",
+        checkboxText: "Segui!",
+        coins: 7
+    }
+]
+
+var level1ConsumerismBonusMissions = [
+    {
+        id: 1,
+        mission: "Comece o mês investindo.",
+        checkboxText: "Investido!",
+        coins: 50
+    }
+]
+
+var level1ConsumerismText = "outro texto pra Consumerism"
+
+var allConsumerismMissions = [level1ConsumerismMissions]
+var allConsumerismBonusMissions = [level1ConsumerismBonusMissions]
+var allConsumerismLevelTexts = [level1ConsumerismText]
+
+
 var level1DisorganizationMissions = [
     {
         id: 1,
@@ -232,9 +263,9 @@ var allDisorganizationBonusMissions = [level1DisorganizationBonusMissions]
 var allDisorganizationLevelTexts = [level1DisorganizationText]
 
 
-var allMissions = [allFoodMissions, allSocialNetworkMissions, allCoffeeMissions, undefined, allDisorganizationMissions]
-var allBonusMissions = [allFoodBonusMissions, allSocialNetworkBonusMissions, allCoffeeBonusMissions, undefined, allDisorganizationBonusMissions]
-var allLevelTexts = [allFoodLevelTexts, allSocialNetworkLevelTexts, allCoffeeLevelTexts, undefined, allDisorganizationLevelTexts]
+var allMissions = [allFoodMissions, allSocialNetworkMissions, allCoffeeMissions, allConsumerismMissions, allDisorganizationMissions]
+var allBonusMissions = [allFoodBonusMissions, allSocialNetworkBonusMissions, allCoffeeBonusMissions, allConsumerismBonusMissions, allDisorganizationBonusMissions]
+var allLevelTexts = [allFoodLevelTexts, allSocialNetworkLevelTexts, allCoffeeLevelTexts, allConsumerismLevelTexts, allDisorganizationLevelTexts]
 
 var habit = getUrlParameter('habit')
 
