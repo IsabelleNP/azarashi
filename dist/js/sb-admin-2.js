@@ -87,13 +87,13 @@ var level1BonusMissions = [
 var level2Missions = [
     {
         id: 1,
-        mission: "sdfjkhsdhfgsdkfhsdfks dasdasdasdassfgdfhdt erwerfsdfsdf",
-        checkboxText: "Desinstalado!",
+        mission: " Evite as compras rápidas de fastfood. Planeje uma refeição saudável e prepare sua marmita para amanhã. ",
+        checkboxText: "Comida pronta!",
         coins: 10
     },
     {
         id: 2,
-        mission: "5555555555555555555 5555555555555555555555555 5555555555555555",
+        mission: "Chegou a hora da bebida! Que tal hoje fazer diferente? Tome bebidas saudáveis durante o dia, como chás, sucos naturais, café descafeinado e água.",
         checkboxText: "Feito!",
         coins: 10
     }
@@ -102,8 +102,8 @@ var level2Missions = [
 var level2BonusMissions = [
     {
         id: 1,
-        mission: "ai meu deus do ceu que js feio que eu to fazendo mas tudo bem o importante é que funciona né kkkkkkkkk",
-        checkboxText: "Eu consegui!",
+        mission: " Não desanime quando for sair com os amigos, convide eles para comer em um ambiente legal e que traga uma proposta de alimentos saudáveis. Faça uma refeição saudável em grupo.",
+        checkboxText: "Feito!",
         coins: 35
     }
 ]
@@ -111,24 +111,24 @@ var level2BonusMissions = [
 var level3Missions = [
     {
         id: 1,
-        mission: "sdfjkhsdhfgsdkfhsdfks dasdasdasdassfgdfhdt erwerfsdfsdf",
-        checkboxText: "Desinstalado!",
-        coins: 10
+        mission: "Hora das compras! Para essa nova etapa é muito importante incorporar alimentos saudáveis à sua lista de compras e evitar guloseimas, alimentos processados e besteiras em geral.",
+        checkboxText: "Feito!",
+        coins: 15
     },
     {
         id: 2,
-        mission: "5555555555555555555 5555555555555555555555555 5555555555555555",
+        mission: "Mão na massa! Vamos sair das mesmices do dia a dia. A missão de hoje é procurar uma receitar e preparar uma refeição saudável.",
         checkboxText: "Feito!",
-        coins: 10
+        coins: 15
     }
 ]
 
 var level3BonusMissions = [
     {
         id: 1,
-        mission: "ai meu deus do ceu que js feio que eu to fazendo mas tudo bem o importante é que funciona né kkkkkkkkk",
+        mission: "Acompanhamento nutricional pode ser o passo crucial para alcançar uma alimentação saudável e equilibrada. Por isso, a missão bônus de hoje é procurar um nutricionista.",
         checkboxText: "Eu consegui!",
-        coins: 35
+        coins: 40
     }
 ]
 
