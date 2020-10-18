@@ -43,6 +43,8 @@ $(function() {
     }
 });
 
+$("#tutorialModal").modal('show')
+
 var level1Missions = [
     {
         id: 1,
