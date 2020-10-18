@@ -17,3 +17,8 @@ Para restaurar os níveis de necessidade, o usuário irá precisar comprar itens
 Para incentivar ainda mais o engajamento com as missões, futuramente será possível compartilhar seu progresso com seus amigos. Com isso o usuário poderá mostrar em que nível ele está e quantas moedas ele já acumulou até o momento. Outra possível interação será a de validação de missões: o usuário irá indicar um amigo para validar a missão que ele cumpriu, fazendo com que ambos recebam moedas extras por isso.
 
 Outra feature futura será a de adicionar itens costumizados para a loja. A ideia é que o usuário poderá criar itens para ele mesmo comprar na loja depois, fazendo com que ele possa definir objetivos e recompensas para ele mesmo.
+
+
+## Execução do projeto
+
+Azarashi é um sistema feito apenas com HTML e JavaScript. Portanto, para executá-lo, você só precisa abrir o arquivo index.html no seu navegador.
