@@ -131,6 +131,7 @@ function initiateLevel(level, missions, bonusMissions) {
         + "<div class=\"panel panel-default\">"
         + "    <div class=\"panel-heading\" style=\"color:#FFFFFF; background-color:#1060D8; border-color:#1060D8\">"
         + "Missão " + mission.id
+        + "                    <div class=\"pull-right\"><i class=\"fa fa-money\" aria-hidden=\"true\"></i>&nbsp;" + mission.coins + "</div>"
         + "    </div>"
         + "    <div class=\"panel-body\">"
         + "        <p>" + mission.mission + "</p>"
@@ -149,6 +150,7 @@ function initiateLevel(level, missions, bonusMissions) {
         + "            <div class=\"panel panel-yellow\">"
         + "                <div class=\"panel-heading\">"
         + "                    Missão Bônus"
+        + "                    <div class=\"pull-right\"><i class=\"fa fa-money\" aria-hidden=\"true\"></i>&nbsp;" + mission.coins + "</div>"
         + "                </div>"
         + "                <div class=\"panel-body\">"
         + "                    <p>" + mission.mission + "</p>"
