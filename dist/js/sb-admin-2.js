@@ -108,8 +108,9 @@ var level2BonusMissions = [
     }
 ]
 
-var level1Text = "Era uma vez um mexilhão feio, que era tão feio, mas tão feio ahsdfajs ajshkd ahj ahkjs dhaahsjkdahksjdas hjashjd ash ahjksd ahjkdhjaks hjadh ashdjk ajshdka hjksdahjk sdhjaksdhjk asdhjkasdh jkashdj kahsd asklfdajsd ajsd ahjskd jhaksdhj kasdh asjdh asdhkj asdh asdkhj asdhjasdhjka shdkjashjd ashkda khjsd hjasdhjka skjd asjhdahsj dashjd asbnda sndb aksbdasjhahsjd"
-var level2Text = "Que todo mundo morreu, fim."
+var level1Text = "Meus hábitos alimentares sempre chamaram atenção no meu grupo de amigos, mas eu achava normal, e meus amigos também não encaravam como um problema. “Eu sou um guaxinim”, eu pensava, “a gente vive desse tipo de comida mesmo, tá tudo certo”. Meu metabolismo rápido me mantinha em forma mesmo sem que eu tivesse que me esforçar o mínimo pra isso, e minha juventude garantia que eu continuasse me sentindo bem o tempo todo. Mas, não sei se te contaram (pra mim, não contaram), a gente não fica jovem pra sempre. Eu fui cobrado. Vou te contar como."
+var level2Text = "As obrigações da vida de um guaxinim não são tão complexas assim. Quer dizer, a gente não tem que trabalhar, produzir e essas baboseiras todas que os humanos fazem, então a gente pode passar mais tempo junto com os outros guaxinins. Cada um tem seu jeito próprio de chamar atenção e fazer amizade, né? Eu não tinha o meu. Até os outros começarem a ver como eu comia e ficarem surpresos com as consequências inexistentes no meu corpo. Inexistentes… Pelo menos era o que eu pensava, né. Eu era o guaxinim descolado por comer lixo ao invés de frutas e essas coisas. Meus problemas de socialização foram resolvidos com o que eu mais gostava na vida: comer. Mas aí depois outros problemas foram criados no lugar."
+var level3Text = "No começo, me aproximei de um pessoal que tinha os mesmos hábitos que os meus. Depois, outros guaxinins curiosos viraram meus amigos. Era muito legal chamar atenção assim, sem fazer nada pra isso. Hoje em dia eu mudei, mas continuo chamando a atenção, claro. Sou o guaxinim mais descolado do meu bairro. A gente ia toda madrugada procurar o lixo que a gente chamava de comida, até o dia que eu percebi que tinha alguma coisa de errado comigo."
 
 var allFoodMissions = [level1Missions, level2Missions]
 var allFoodBonusMissions = [level1BonusMissions, level2BonusMissions]
@@ -290,3 +291,7 @@ function buySoap() {
     hygiene += 10
     $("#hygiene-bar").css('width', hygiene + "%")
 }
+
+var petImagesSource = ["panda_lixo.png", "baleia.png", "bode.png", "Ourico.png", "panda.png"]
+
+document.getElementById("petImage").src = "../resources/pets/" + petImagesSource[habit];
