@@ -47,21 +47,23 @@ var level1Missions = [
     {
         id: 1,
         mission: "Para começar, vamos mudar as coisas no seu dia a dia para desencorajar a vontade de comer fast food. Desinstale os aplicativos que você usa para comprar comidas ultraprocessadas.",
-        checkboxText: "Desinstalado!"
+        checkboxText: "Desinstalado!",
+        coins: 5
     },
     {
         id: 2,
         mission: "Vamos começar com passos pequenos, né? Faça uma refeição saudável e volte aqui para marcar seu progresso.",
-        checkboxText: "Feito!"
+        checkboxText: "Feito!",
+        coins: 5
     }
 ]
 
 var level1BonusMissions = [
     {
         id: 1,
-        mission: "As missões bônus tem um nível de dificuldade um pouco maior que as missões do seu nível, portanto não se assuste! Para concluir essa daqui, fique uma semana inteira comendo sempre saudável em uma das refeições do dia.",
+        mission: "As missões bônus tem um nível de dificuldade um pouco maior que as missões do seu nível mas são opcionais, portanto não se assuste! Para concluir essa daqui, fique uma semana inteira comendo sempre saudável em uma das refeições do dia. Caso você conclua, irá ganhar moedas bônus!",
         checkboxText: "Eu consegui!",
-        coins: 10
+        coins: 30
     }
 ]
 
@@ -69,12 +71,14 @@ var level2Missions = [
     {
         id: 1,
         mission: "sdfjkhsdhfgsdkfhsdfks dasdasdasdassfgdfhdt erwerfsdfsdf",
-        checkboxText: "Desinstalado!"
+        checkboxText: "Desinstalado!",
+        coins: 10
     },
     {
         id: 2,
         mission: "5555555555555555555 5555555555555555555555555 5555555555555555",
-        checkboxText: "Feito!"
+        checkboxText: "Feito!",
+        coins: 10
     }
 ]
 
@@ -83,7 +87,7 @@ var level2BonusMissions = [
         id: 1,
         mission: "ai meu deus do ceu que js feio que eu to fazendo mas tudo bem o importante é que funciona né kkkkkkkkk",
         checkboxText: "Eu consegui!",
-        coins: 10
+        coins: 35
     }
 ]
 
@@ -132,7 +136,7 @@ function initiateLevel(level, missions, bonusMissions) {
         + "        <p>" + mission.mission + "</p>"
         + "    </div>"
         + "    <div class=\"panel-footer\">"
-        + "<input type=\"checkbox\" onchange=\"completeMission(this)\" mission-id='" + mission.id + "'>&nbsp;&nbsp;"
+        + "<input type=\"checkbox\" onchange=\"completeMission(this)\" mission-coins='" + mission.coins + "'>&nbsp;&nbsp;"
         + mission.checkboxText
         + "    </div>"
         + "</div>"
@@ -162,6 +166,9 @@ function completeMission(checkbox) {
     $(checkbox).attr("disabled", true)
     missionCount--
 
+    coins += parseInt($(checkbox).attr("mission-coins"))
+    $("#coins").html("Sua carteira: " + coins + " moedas")
+
     if (missionCount == 0) {
         $("#next-level").append(""
         + "<div class=\"col-lg-12 col-lg-push-7\">"
@@ -173,12 +180,16 @@ function completeMission(checkbox) {
 function completeBonusMission(checkbox) {
     $(checkbox).attr("disabled", true)
     coins += parseInt($(checkbox).attr("mission-coins"))
+    $("#coins").html("Sua carteira: " + coins + " moedas")
 }
 
 function goToNextLevel() {
     if (currentLevel != 0) {
         $("#history").html(allLevelTexts[currentLevel - 1])
+        $("#history").append("<br><br> Você ganhou 10 moedas por ter concluído esse nível!")
         $("#exampleModal").modal('show')
+        coins += 10
+        $("#coins").html("Sua carteira: " + coins + " moedas")
     }
 
     currentLevel += 1
@@ -187,4 +198,43 @@ function goToNextLevel() {
     } else {
         initiateLevel(currentLevel, allMissions[currentLevel - 1], allBonusMissions[currentLevel - 1])
     }
+}
+
+function buyPizza() {
+    if (coins < 25) {
+        $("#notEnoughMoneyModal").modal('show')
+        return
+    }
+
+    coins -= 25
+    $("#coins").html("Sua carteira: " + coins + " moedas")
+
+    hunger += 30
+    $("#hunger-bar").css('width', hunger + "%")
+}
+
+function buyApple() {
+    if (coins < 10) {
+        $("#notEnoughMoneyModal").modal('show')
+        return
+    }
+
+    coins -= 10
+    $("#coins").html("Sua carteira: " + coins + " moedas")
+
+    hunger += 15
+    $("#hunger-bar").css('width', hunger + "%")
+}
+
+function buySoap() {
+    if (coins < 5) {
+        $("#notEnoughMoneyModal").modal('show')
+        return
+    }
+
+    coins -= 5
+    $("#coins").html("Sua carteira: " + coins + " moedas")
+
+    hygiene += 10
+    $("#hygiene-bar").css('width', hygiene + "%")
 }

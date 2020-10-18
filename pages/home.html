@@ -24,8 +24,59 @@
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Azarashi</a>
+                <a class="navbar-brand" href="#"><img src="../resources/logo.png" height="130%"></a>
             </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-shopping-cart fa-fw"></i><i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#" onclick="buyPizza()">
+                                <div>
+                                    <strong>Pizza</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>25 moedas</em>
+                                    </span>
+                                </div>
+                                <div>Restaura 30 de fome</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" onclick="buyApple()">
+                                <div>
+                                    <strong>Maçã</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>10 moedas</em>
+                                    </span>
+                                </div>
+                                <div>Restaura 15 de fome</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" onclick="buySoap()">
+                                <div>
+                                    <strong>Sabonete</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>5 moedas</em>
+                                    </span>
+                                </div>
+                                <div>Restaura 10 de higiene</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong id="coins">Sua carteira: 0 moedas</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse" style="text-align: center;">
@@ -72,6 +123,25 @@
                     </div>
                     <div class="modal-body" id="history">
                         ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="notEnoughMoneyModal" tabindex="-1" role="dialog" aria-labelledby="notEnoughMoneyModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="notEnoughMoneyModalLabel">Não foi possível realizar a compra</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você não tem dinheiro suficiente para comprar esse item.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
