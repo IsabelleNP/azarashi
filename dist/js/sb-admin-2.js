@@ -143,21 +143,26 @@ var allFoodLevelTexts = [level1Text, level2Text, level3Text]
 var level1SocialNetworkMissions = [
     {
         id: 1,
-        mission: "missão de rede social bla bla",
-        checkboxText: "Desinstalado!",
+        mission: "Termine o dia de hoje substituindo o hábito de navegar nas redes sociais antes de dormir por um hábito relaxante, como ouvir músicas relaxantes, meditar ou beber chá de ervas.",
+        checkboxText: "Sucesso!",
         coins: 5
+    },
+    {
+        id: 2,
+        mission: "Criei uma lista de pequenas coisas para fazer no seu tempo livre, assim o seu tempo disponível será mais saudável.",
+        checkboxText: "Criado!",
+        coins: 7
     }
 ]
 
 var level1SocialNetworkBonusMissions = [
     {
         id: 1,
-        mission: "bonus bonus bonus",
-        checkboxText: "Eu consegui!",
+        mission: "Desconecte-se e almoce bem. Durante os almoços dessa próxima semana evite seu aparelho eletrônico e deguste seu almoço.",
+        checkboxText: "Desconectado!",
         coins: 30
     }
 ]
-
 
 var level1SocialNetworkText = "outro texto pra rede social"
 
@@ -165,10 +170,40 @@ var allSocialNetworkMissions = [level1SocialNetworkMissions]
 var allSocialNetworkBonusMissions = [level1SocialNetworkBonusMissions]
 var allSocialNetworkLevelTexts = [level1SocialNetworkText]
 
+var level1CoffeeMissions = [
+    {
+        id: 1,
+        mission: "Termine o dia de hoje substituindo o hábito de beber café antes de dormir por um bebida mais saldável ou relaxante, como água, suco natural ou chá de ervas.",
+        checkboxText: "Sucesso!",
+        coins: 5
+    },
+    {
+        id: 2,
+        mission: "Comece leve, durante o fim de semana substitua o café por bebidas leves e saudáveis.",
+        checkboxText: "Feito!",
+        coins: 7
+    }
+]
 
-var allMissions = [allFoodMissions, allSocialNetworkMissions]
-var allBonusMissions = [allFoodBonusMissions, allSocialNetworkBonusMissions]
-var allLevelTexts = [allFoodLevelTexts, allSocialNetworkLevelTexts]
+var level1CoffeeBonusMissions = [
+    {
+        id: 1,
+        mission: "Monitore a quantidade de café ingerido durante o decorrer do dia e se planeje para nos próximos 3 dias diminuir a quantidade de café da xícara pela metade.",
+        checkboxText: "Reduzido!",
+        coins: 40
+    }
+]
+
+var level1CoffeeText = "outro texto pra café"
+
+var allCoffeeMissions = [level1CoffeeMissions]
+var allCoffeeBonusMissions = [level1CoffeeBonusMissions]
+var allCoffeeLevelTexts = [level1CoffeeText]
+
+
+var allMissions = [allFoodMissions, allSocialNetworkMissions, allCoffeeMissions]
+var allBonusMissions = [allFoodBonusMissions, allSocialNetworkBonusMissions, allCoffeeBonusMissions]
+var allLevelTexts = [allFoodLevelTexts, allSocialNetworkLevelTexts, allCoffeeLevelTexts]
 
 var habit = getUrlParameter('habit')
 
