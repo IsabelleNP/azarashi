@@ -68,12 +68,12 @@ var level1BonusMissions = [
 var level2Missions = [
     {
         id: 1,
-        mission: "Para começar, vamos mudar as coisas no seu dia a dia para desencorajar a vontade de comer fast food. Desinstale os aplicativos que você usa para comprar comidas ultraprocessadas.",
+        mission: "sdfjkhsdhfgsdkfhsdfks dasdasdasdassfgdfhdt erwerfsdfsdf",
         checkboxText: "Desinstalado!"
     },
     {
         id: 2,
-        mission: "Vamos começar com passos pequenos, né? Faça uma refeição saudável e volte aqui para marcar seu progresso.",
+        mission: "5555555555555555555 5555555555555555555555555 5555555555555555",
         checkboxText: "Feito!"
     }
 ]
@@ -81,14 +81,18 @@ var level2Missions = [
 var level2BonusMissions = [
     {
         id: 1,
-        mission: "As missões bônus tem um nível de dificuldade um pouco maior que as missões do seu nível, portanto não se assuste! Para concluir essa daqui, fique uma semana inteira comendo sempre saudável em uma das refeições do dia.",
+        mission: "ai meu deus do ceu que js feio que eu to fazendo mas tudo bem o importante é que funciona né kkkkkkkkk",
         checkboxText: "Eu consegui!",
         coins: 10
     }
 ]
 
+var level1Text = "Era uma vez um mexilhão feio, que era tão feio, mas tão feio ahsdfajs ajshkd ahj ahkjs dhaahsjkdahksjdas hjashjd ash ahjksd ahjkdhjaks hjadh ashdjk ajshdka hjksdahjk sdhjaksdhjk asdhjkasdh jkashdj kahsd asklfdajsd ajsd ahjskd jhaksdhj kasdh asjdh asdhkj asdh asdkhj asdhjasdhjka shdkjashjd ashkda khjsd hjasdhjka skjd asjhdahsj dashjd asbnda sndb aksbdasjhahsjd"
+var level2Text = "Que todo mundo morreu, fim."
+
 var allMissions = [level1Missions, level2Missions]
 var allBonusMissions = [level1BonusMissions, level2BonusMissions]
+var allLevelTexts = [level1Text, level2Text]
 
 var coins = 0
 var missionCount = 0
@@ -156,15 +160,17 @@ function completeBonusMission(checkbox) {
 }
 
 function goToNextLevel() {
+    console.log(currentLevel)
+    if (currentLevel != 0) {
+        console.log(allLevelTexts[currentLevel - 1])
+        $("#history").html(allLevelTexts[currentLevel - 1])
+        $("#exampleModal").modal('show')
+    }
+
     currentLevel += 1
     if (currentLevel == 3) {
-        showEndModal()
-        return
-    } 
-    initiateLevel(currentLevel, allMissions[currentLevel - 1], allBonusMissions[currentLevel - 1])
-}
-
-function showEndModal() {
-    $("#next-level").empty()
-    console.log('Acabou')
+        $("#next-level").empty()
+    } else {
+        initiateLevel(currentLevel, allMissions[currentLevel - 1], allBonusMissions[currentLevel - 1])
+    }
 }
