@@ -58,52 +58,52 @@
                                 <ul>
 
                                   <li>
-                                    <input type="radio" id="pet1" name="pets" checked/>
+                                    <input type="radio" id="pet1" name="pets" value="0" checked/>
                                     <label for="pet1"><img src="./resources/pets/panda_lixo.png" /></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
-                                        Má alimentação <br> (indisponível)
+                                        Má alimentação
                                       </div>
                                     </div>
                                   </li>
                                   <li>
 
-                                    <input type="radio" id="pet2"  name="pets" />
+                                    <input type="radio" id="pet2" value="1" name="pets" />
                                     <label for="pet2"><img src="./resources/pets/baleia.png" disabled="disabled"/></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
-                                        Rede social <br> (indisponível)
+                                        Rede social
                                       </div>
                                     </div>
                                   </li>
                                   <li>
 
-                                    <input type="radio" id="pet3"  name="pets"/>
+                                    <input type="radio" id="pet3" value="2" name="pets"/>
                                     <label for="pet3"><img src="./resources/pets/bode.png" /></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
-                                        Café <br> (indisponível)
+                                        Café
                                       </div>
                                     </div>
                                   </li>
 
                                   <li>
 
-                                    <input type="radio" id="pet4"  name="pets"/>
+                                    <input type="radio" id="pet4" value="3" name="pets"/>
                                     <label for="pet4"><img src="./resources/pets/Ourico.png" /></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
-                                        Consumismo <br> (indisponível)
+                                        Consumismo
                                       </div>
                                     </div>
                                   </li>
 
                                   <li>
-                                    <input type="radio" id="pet5"  name="pets"/>
+                                    <input type="radio" id="pet5" value="4" name="pets"/>
                                     <label for="pet5"><img src="./resources/pets/panda.png" /></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
-                                        Desorganização <br> (indisponível)
+                                        Desorganização 
                                       </div>
                                     </div>
                                   </li>
@@ -125,13 +125,13 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title" id="disabledPetModalLabel">Pet desabilitado</h3>
+                        <h3 class="modal-title" id="disabledPetModalLabel">Pet em desenvolvimento</h3>
                     </div>
                     <div class="modal-body" id="history">
-                        Este pet está indisponível no momento. Por favor, escolha outro!
+                        Este pet está em desenvolvimento e possui apenas o primeiro nível. Caso queira ver como funciona com mais níveis, volte nessa página e selecione o pet de má alimentação.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btnContinue">Continuar</button>
                     </div>
                 </div>
             </div>

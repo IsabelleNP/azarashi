@@ -43,6 +43,21 @@ $(function() {
     }
 });
 
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
 $("#tutorialModal").modal('show')
 
 var level1Missions = [
@@ -96,9 +111,41 @@ var level2BonusMissions = [
 var level1Text = "Era uma vez um mexilhão feio, que era tão feio, mas tão feio ahsdfajs ajshkd ahj ahkjs dhaahsjkdahksjdas hjashjd ash ahjksd ahjkdhjaks hjadh ashdjk ajshdka hjksdahjk sdhjaksdhjk asdhjkasdh jkashdj kahsd asklfdajsd ajsd ahjskd jhaksdhj kasdh asjdh asdhkj asdh asdkhj asdhjasdhjka shdkjashjd ashkda khjsd hjasdhjka skjd asjhdahsj dashjd asbnda sndb aksbdasjhahsjd"
 var level2Text = "Que todo mundo morreu, fim."
 
-var allMissions = [level1Missions, level2Missions]
-var allBonusMissions = [level1BonusMissions, level2BonusMissions]
-var allLevelTexts = [level1Text, level2Text]
+var allFoodMissions = [level1Missions, level2Missions]
+var allFoodBonusMissions = [level1BonusMissions, level2BonusMissions]
+var allFoodLevelTexts = [level1Text, level2Text]
+
+var level1SocialNetworkMissions = [
+    {
+        id: 1,
+        mission: "missão de rede social bla bla",
+        checkboxText: "Desinstalado!",
+        coins: 5
+    }
+]
+
+var level1SocialNetworkBonusMissions = [
+    {
+        id: 1,
+        mission: "bonus bonus bonus",
+        checkboxText: "Eu consegui!",
+        coins: 30
+    }
+]
+
+
+var level1SocialNetworkText = "outro texto pra rede social"
+
+var allSocialNetworkMissions = [level1SocialNetworkMissions]
+var allSocialNetworkBonusMissions = [level1SocialNetworkBonusMissions]
+var allSocialNetworkLevelTexts = [level1SocialNetworkText]
+
+
+var allMissions = [allFoodMissions, allSocialNetworkMissions]
+var allBonusMissions = [allFoodBonusMissions, allSocialNetworkBonusMissions]
+var allLevelTexts = [allFoodLevelTexts, allSocialNetworkLevelTexts]
+
+var habit = getUrlParameter('habit')
 
 var coins = 0
 var missionCount = 0
@@ -189,7 +236,7 @@ function completeBonusMission(checkbox) {
 
 function goToNextLevel() {
     if (currentLevel != 0) {
-        $("#history").html(allLevelTexts[currentLevel - 1])
+        $("#history").html(allLevelTexts[habit][currentLevel - 1])
         $("#history").append("<br><br> Você ganhou 10 moedas por ter concluído esse nível!")
         $("#exampleModal").modal('show')
         coins += 10
@@ -197,10 +244,11 @@ function goToNextLevel() {
     }
 
     currentLevel += 1
-    if (currentLevel == 3) {
+    if (currentLevel - 1 == allMissions[habit].length) {
+        console.log('fim')
         $("#next-level").empty()
     } else {
-        initiateLevel(currentLevel, allMissions[currentLevel - 1], allBonusMissions[currentLevel - 1])
+        initiateLevel(currentLevel, allMissions[habit][currentLevel - 1], allBonusMissions[habit][currentLevel - 1])
     }
 }
 
