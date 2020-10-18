@@ -108,13 +108,61 @@ var level2BonusMissions = [
     }
 ]
 
+var level3Missions = [
+    {
+        id: 1,
+        mission: "sdfjkhsdhfgsdkfhsdfks dasdasdasdassfgdfhdt erwerfsdfsdf",
+        checkboxText: "Desinstalado!",
+        coins: 10
+    },
+    {
+        id: 2,
+        mission: "5555555555555555555 5555555555555555555555555 5555555555555555",
+        checkboxText: "Feito!",
+        coins: 10
+    }
+]
+
+var level3BonusMissions = [
+    {
+        id: 1,
+        mission: "ai meu deus do ceu que js feio que eu to fazendo mas tudo bem o importante é que funciona né kkkkkkkkk",
+        checkboxText: "Eu consegui!",
+        coins: 35
+    }
+]
+
+var level4Missions = [
+    {
+        id: 1,
+        mission: "sdfjkhsdhfgsdkfhsdfks dasdasdasdassfgdfhdt erwerfsdfsdf",
+        checkboxText: "Desinstalado!",
+        coins: 10
+    },
+    {
+        id: 2,
+        mission: "5555555555555555555 5555555555555555555555555 5555555555555555",
+        checkboxText: "Feito!",
+        coins: 10
+    }
+]
+
+var level4BonusMissions = [
+    {
+        id: 1,
+        mission: "ai meu deus do ceu que js feio que eu to fazendo mas tudo bem o importante é que funciona né kkkkkkkkk",
+        checkboxText: "Eu consegui!",
+        coins: 35
+    }
+]
+
 var level1Text = "Meus hábitos alimentares sempre chamaram atenção no meu grupo de amigos, mas eu achava normal, e meus amigos também não encaravam como um problema. “Eu sou um guaxinim”, eu pensava, “a gente vive desse tipo de comida mesmo, tá tudo certo”. Meu metabolismo rápido me mantinha em forma mesmo sem que eu tivesse que me esforçar o mínimo pra isso, e minha juventude garantia que eu continuasse me sentindo bem o tempo todo. Mas, não sei se te contaram (pra mim, não contaram), a gente não fica jovem pra sempre. Eu fui cobrado. Vou te contar como."
 var level2Text = "As obrigações da vida de um guaxinim não são tão complexas assim. Quer dizer, a gente não tem que trabalhar, produzir e essas baboseiras todas que os humanos fazem, então a gente pode passar mais tempo junto com os outros guaxinins. Cada um tem seu jeito próprio de chamar atenção e fazer amizade, né? Eu não tinha o meu. Até os outros começarem a ver como eu comia e ficarem surpresos com as consequências inexistentes no meu corpo. Inexistentes… Pelo menos era o que eu pensava, né. Eu era o guaxinim descolado por comer lixo ao invés de frutas e essas coisas. Meus problemas de socialização foram resolvidos com o que eu mais gostava na vida: comer. Mas aí depois outros problemas foram criados no lugar."
 var level3Text = "No começo, me aproximei de um pessoal que tinha os mesmos hábitos que os meus. Depois, outros guaxinins curiosos viraram meus amigos. Era muito legal chamar atenção assim, sem fazer nada pra isso. Hoje em dia eu mudei, mas continuo chamando a atenção, claro. Sou o guaxinim mais descolado do meu bairro. A gente ia toda madrugada procurar o lixo que a gente chamava de comida, até o dia que eu percebi que tinha alguma coisa de errado comigo."
 
-var allFoodMissions = [level1Missions, level2Missions]
-var allFoodBonusMissions = [level1BonusMissions, level2BonusMissions]
-var allFoodLevelTexts = [level1Text, level2Text]
+var allFoodMissions = [level1Missions, level2Missions, level3Missions, level4Missions]
+var allFoodBonusMissions = [level1BonusMissions, level2BonusMissions, level3BonusMissions, level4BonusMissions]
+var allFoodLevelTexts = [level1Text, level2Text, level3Text]
 
 var level1SocialNetworkMissions = [
     {
