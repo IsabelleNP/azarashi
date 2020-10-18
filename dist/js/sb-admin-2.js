@@ -242,7 +242,10 @@ function completeMission(checkbox) {
     $(checkbox).attr("disabled", true)
     missionCount--
 
-    coins += parseInt($(checkbox).attr("mission-coins"))
+    coinsWon = parseInt($(checkbox).attr("mission-coins"))
+    coins += coinsWon
+    toastr.success("Você ganhou " + coinsWon + " moedas!")
+
     $("#coins").html("Sua carteira: " + coins + " moedas")
 
     if (missionCount == 0) {
@@ -255,7 +258,9 @@ function completeMission(checkbox) {
 
 function completeBonusMission(checkbox) {
     $(checkbox).attr("disabled", true)
-    coins += parseInt($(checkbox).attr("mission-coins"))
+    coinsWon = parseInt($(checkbox).attr("mission-coins"))
+    coins += coinsWon
+    toastr.success("Você ganhou " + coinsWon + " moedas!")
     $("#coins").html("Sua carteira: " + coins + " moedas")
 }
 
@@ -265,6 +270,7 @@ function goToNextLevel() {
         $("#history").append("<br><br> Você ganhou 10 moedas por ter concluído esse nível!")
         $("#exampleModal").modal('show')
         coins += 10
+        toastr.success("Você ganhou 10 moedas!")
         $("#coins").html("Sua carteira: " + coins + " moedas")
     }
 
@@ -284,6 +290,7 @@ function buyPizza() {
     }
 
     coins -= 25
+    toastr.info("Você gastou 25 moedas!")
     $("#coins").html("Sua carteira: " + coins + " moedas")
 
     hunger += 30
@@ -297,6 +304,7 @@ function buyApple() {
     }
 
     coins -= 10
+    toastr.info("Você gastou 10 moedas!")
     $("#coins").html("Sua carteira: " + coins + " moedas")
 
     hunger += 15
@@ -310,6 +318,7 @@ function buySoap() {
     }
 
     coins -= 5
+    toastr.info("Você gastou 5 moedas!")
     $("#coins").html("Sua carteira: " + coins + " moedas")
 
     hygiene += 10
