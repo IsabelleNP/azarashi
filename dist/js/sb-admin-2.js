@@ -102,13 +102,17 @@ var hygiene = 100
 goToNextLevel()
 
 var hungerInterval = setInterval(function () {
-    hunger -= 2
-    $("#hunger-bar").css('width', hunger + "%")
+    if (hunger > 0) {
+        hunger -= 2
+        $("#hunger-bar").css('width', hunger + "%")
+    }
 }, 10000)
 
 var hygieneInterval = setInterval(function () {
-    hygiene -= 1
-    $("#hygiene-bar").css('width', hygiene + "%")
+    if (hygiene > 0) {
+        hygiene -= 1
+        $("#hygiene-bar").css('width', hygiene + "%")
+    }
 }, 9000)
 
 function initiateLevel(level, missions, bonusMissions) {
