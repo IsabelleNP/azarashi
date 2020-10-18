@@ -201,9 +201,40 @@ var allCoffeeBonusMissions = [level1CoffeeBonusMissions]
 var allCoffeeLevelTexts = [level1CoffeeText]
 
 
-var allMissions = [allFoodMissions, allSocialNetworkMissions, allCoffeeMissions]
-var allBonusMissions = [allFoodBonusMissions, allSocialNetworkBonusMissions, allCoffeeBonusMissions]
-var allLevelTexts = [allFoodLevelTexts, allSocialNetworkLevelTexts, allCoffeeLevelTexts]
+var level1DisorganizationMissions = [
+    {
+        id: 1,
+        mission: "Comece o dia arrumando sua cama.",
+        checkboxText: "Arrumado!",
+        coins: 5
+    },
+    {
+        id: 2,
+        mission: "Se arrumar passa a sensação de início e que muitas vezes é o sentimento de motivação que precisamos. Por isso, a tarefa de hoje é se arrume para se sentir confortável e motivado.",
+        checkboxText: "Estou motivado!",
+        coins: 7
+    }
+]
+
+var level1DisorganizationBonusMissions = [
+    {
+        id: 1,
+        mission: "Aumente a sua proatividade no trabalho nessa semana, mantendo o local limpo, arrumado e com os objetos de uso frequento em um local de fácil acesso.",
+        checkboxText: "Feito!",
+        coins: 25
+    }
+]
+
+var level1DisorganizationText = "outro texto pra Disorganization"
+
+var allDisorganizationMissions = [level1DisorganizationMissions]
+var allDisorganizationBonusMissions = [level1DisorganizationBonusMissions]
+var allDisorganizationLevelTexts = [level1DisorganizationText]
+
+
+var allMissions = [allFoodMissions, allSocialNetworkMissions, allCoffeeMissions, undefined, allDisorganizationMissions]
+var allBonusMissions = [allFoodBonusMissions, allSocialNetworkBonusMissions, allCoffeeBonusMissions, undefined, allDisorganizationBonusMissions]
+var allLevelTexts = [allFoodLevelTexts, allSocialNetworkLevelTexts, allCoffeeLevelTexts, undefined, allDisorganizationLevelTexts]
 
 var habit = getUrlParameter('habit')
 
