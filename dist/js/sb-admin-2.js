@@ -164,7 +164,7 @@ var level1SocialNetworkBonusMissions = [
     }
 ]
 
-var level1SocialNetworkText = "outro texto pra rede social"
+var level1SocialNetworkText = "Como qualquer ser vivo conectado, passo boa parte do meu tempo nas redes sociais. A primeira e a última coisa que faço no meu dia é conferir o que está rolando na interwebs, a vontade de ficar mexendo no feed é tanta que às vezes fico a manhã inteira no celular haha. Meus amigos sempre vêm me procurar quando querem saber de algo, afinal, eu sei de tudo que rola nessa internet. Ultimamente venho me preocupando com o meu desempenho na atividades do dia a dia, parece que não tenho tempo para realizá-las, estou levantando tão tarde que quando vejo metade do dia já se foi. Além disso, as atividades parecem tão chatas que sempre me pego mexendo nas redes sociais para me distrair dessa dinâmica lenta."
 
 var allSocialNetworkMissions = [level1SocialNetworkMissions]
 var allSocialNetworkBonusMissions = [level1SocialNetworkBonusMissions]
