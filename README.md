@@ -21,6 +21,8 @@ Outra feature futura será a de adicionar itens costumizados para a loja. A idei
 
 ## Execução do projeto
 
-Azarashi é um sistema feito apenas com HTML e JavaScript. Portanto, para executá-lo, você só precisa abrir o arquivo index.html no seu navegador.
+Azarashi é um sistema feito apenas com HTML e JavaScript. Portanto, para executá-lo localmente, você só precisa abrir o arquivo index.html no seu navegador.
 
+O sistema pode ser acessado por: http://azarashi.herokuapp.com/
+Heroku é um serviço gratuito, por isso depois de um tempo de inatividade o servidor é desligado automaticamente. Aguarde um momento ao acessar o site para que ele inicie.
 ATENÇÃO: o sistema não tem suporte para HTTPS.
