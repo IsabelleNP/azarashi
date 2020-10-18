@@ -30,9 +30,6 @@ $(function() {
     });
 
     var url = window.location;
-    // var element = $('ul.nav a').filter(function() {
-    //     return this.href == url;
-    // }).addClass('active').parent().parent().addClass('in').parent();
     var element = $('ul.nav a').filter(function() {
         return this.href == url;
     }).addClass('active').parent();
@@ -45,3 +42,129 @@ $(function() {
         }
     }
 });
+
+var level1Missions = [
+    {
+        id: 1,
+        mission: "Para começar, vamos mudar as coisas no seu dia a dia para desencorajar a vontade de comer fast food. Desinstale os aplicativos que você usa para comprar comidas ultraprocessadas.",
+        checkboxText: "Desinstalado!"
+    },
+    {
+        id: 2,
+        mission: "Vamos começar com passos pequenos, né? Faça uma refeição saudável e volte aqui para marcar seu progresso.",
+        checkboxText: "Feito!"
+    }
+]
+
+var level1BonusMissions = [
+    {
+        id: 1,
+        mission: "As missões bônus tem um nível de dificuldade um pouco maior que as missões do seu nível, portanto não se assuste! Para concluir essa daqui, fique uma semana inteira comendo sempre saudável em uma das refeições do dia.",
+        checkboxText: "Eu consegui!",
+        coins: 10
+    }
+]
+
+var level2Missions = [
+    {
+        id: 1,
+        mission: "Para começar, vamos mudar as coisas no seu dia a dia para desencorajar a vontade de comer fast food. Desinstale os aplicativos que você usa para comprar comidas ultraprocessadas.",
+        checkboxText: "Desinstalado!"
+    },
+    {
+        id: 2,
+        mission: "Vamos começar com passos pequenos, né? Faça uma refeição saudável e volte aqui para marcar seu progresso.",
+        checkboxText: "Feito!"
+    }
+]
+
+var level2BonusMissions = [
+    {
+        id: 1,
+        mission: "As missões bônus tem um nível de dificuldade um pouco maior que as missões do seu nível, portanto não se assuste! Para concluir essa daqui, fique uma semana inteira comendo sempre saudável em uma das refeições do dia.",
+        checkboxText: "Eu consegui!",
+        coins: 10
+    }
+]
+
+var allMissions = [level1Missions, level2Missions]
+var allBonusMissions = [level1BonusMissions, level2BonusMissions]
+
+var coins = 0
+var missionCount = 0
+var currentLevel = 0
+goToNextLevel()
+
+function initiateLevel(level, missions, bonusMissions) {
+    missionCount = missions.length
+    $("#level").text("Nível " + level)
+    $("#missions").empty()
+    $("#next-level").empty()
+
+    for (mission of missions) {
+        $("#missions").append(""
+        + "<div class=\"col-lg-3\" id='mission" + mission.id +"'>"
+        + "<div class=\"panel panel-default\">"
+        + "    <div class=\"panel-heading\">"
+        + "Missão " + mission.id
+        + "    </div>"
+        + "    <div class=\"panel-body\">"
+        + "        <p>" + mission.mission + "</p>"
+        + "    </div>"
+        + "    <div class=\"panel-footer\">"
+        + "<input type=\"checkbox\" onchange=\"completeMission(this)\" mission-id='" + mission.id + "'>&nbsp;&nbsp;"
+        + mission.checkboxText
+        + "    </div>"
+        + "</div>"
+        + "</div>")
+    }
+
+    for (mission of bonusMissions) {
+        $("#missions").append(""
+        + "<div class=\"col-lg-3\" id='bonus" + mission.id +"'>"
+        + "            <div class=\"panel panel-yellow\">"
+        + "                <div class=\"panel-heading\">"
+        + "                    Missão Bônus"
+        + "                </div>"
+        + "                <div class=\"panel-body\">"
+        + "                    <p>" + mission.mission + "</p>"
+        + "                </div>"
+        + "                <div class=\"panel-footer\">"
+        + "<input type=\"checkbox\" onchange=\"completeBonusMission(this)\" mission-coins='" + mission.coins + "'>&nbsp;&nbsp;"
+        + mission.checkboxText
+        + "                </div>"
+        + "            </div>"
+        + "        </div>")
+    }
+}
+
+function completeMission(checkbox) {
+    $(checkbox).attr("disabled", true)
+    missionCount--
+
+    if (missionCount == 0) {
+        $("#next-level").append(""
+        + "<div class=\"col-lg-12 col-lg-push-7\">"
+        + "      <button onClick=\"goToNextLevel()\">Próximo nível</button>"
+        + "</div>")
+    }
+}
+
+function completeBonusMission(checkbox) {
+    $(checkbox).attr("disabled", true)
+    coins += parseInt($(checkbox).attr("mission-coins"))
+}
+
+function goToNextLevel() {
+    currentLevel += 1
+    if (currentLevel == 3) {
+        showEndModal()
+        return
+    } 
+    initiateLevel(currentLevel, allMissions[currentLevel - 1], allBonusMissions[currentLevel - 1])
+}
+
+function showEndModal() {
+    $("#next-level").empty()
+    console.log('Acabou')
+}
