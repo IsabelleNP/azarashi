@@ -97,7 +97,19 @@ var allLevelTexts = [level1Text, level2Text]
 var coins = 0
 var missionCount = 0
 var currentLevel = 0
+var hunger = 100
+var hygiene = 100
 goToNextLevel()
+
+var hungerInterval = setInterval(function () {
+    hunger -= 2
+    $("#hunger-bar").css('width', hunger + "%")
+}, 10000)
+
+var hygieneInterval = setInterval(function () {
+    hygiene -= 1
+    $("#hygiene-bar").css('width', hygiene + "%")
+}, 9000)
 
 function initiateLevel(level, missions, bonusMissions) {
     missionCount = missions.length
@@ -109,7 +121,7 @@ function initiateLevel(level, missions, bonusMissions) {
         $("#missions").append(""
         + "<div class=\"col-lg-3\" id='mission" + mission.id +"'>"
         + "<div class=\"panel panel-default\">"
-        + "    <div class=\"panel-heading\">"
+        + "    <div class=\"panel-heading\" style=\"color:#FFFFFF; background-color:#1060D8; border-color:#1060D8\">"
         + "Missão " + mission.id
         + "    </div>"
         + "    <div class=\"panel-body\">"
@@ -160,9 +172,7 @@ function completeBonusMission(checkbox) {
 }
 
 function goToNextLevel() {
-    console.log(currentLevel)
     if (currentLevel != 0) {
-        console.log(allLevelTexts[currentLevel - 1])
         $("#history").html(allLevelTexts[currentLevel - 1])
         $("#exampleModal").modal('show')
     }
