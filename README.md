@@ -22,3 +22,5 @@ Outra feature futura será a de adicionar itens costumizados para a loja. A idei
 ## Execução do projeto
 
 Azarashi é um sistema feito apenas com HTML e JavaScript. Portanto, para executá-lo, você só precisa abrir o arquivo index.html no seu navegador.
+
+ATENÇÃO: o sistema não tem suporte para HTTPS.
