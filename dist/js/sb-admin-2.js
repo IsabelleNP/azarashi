@@ -87,13 +87,13 @@ var level1BonusMissions = [
 var level2Missions = [
     {
         id: 1,
-        mission: "sdfjkhsdhfgsdkfhsdfks dasdasdasdassfgdfhdt erwerfsdfsdf",
-        checkboxText: "Desinstalado!",
+        mission: " Evite as compras rápidas de fastfood. Planeje uma refeição saudável e prepare sua marmita para amanhã. ",
+        checkboxText: "Comida pronta!",
         coins: 10
     },
     {
         id: 2,
-        mission: "5555555555555555555 5555555555555555555555555 5555555555555555",
+        mission: "Chegou a hora da bebida! Que tal hoje fazer diferente? Tome bebidas saudáveis durante o dia, como chás, sucos naturais, café descafeinado e água.",
         checkboxText: "Feito!",
         coins: 10
     }
@@ -102,9 +102,33 @@ var level2Missions = [
 var level2BonusMissions = [
     {
         id: 1,
-        mission: "ai meu deus do ceu que js feio que eu to fazendo mas tudo bem o importante é que funciona né kkkkkkkkk",
-        checkboxText: "Eu consegui!",
+        mission: " Não desanime quando for sair com os amigos, convide eles para comer em um ambiente legal e que traga uma proposta de alimentos saudáveis. Faça uma refeição saudável em grupo.",
+        checkboxText: "Feito!",
         coins: 35
+    }
+]
+
+var level3Missions = [
+    {
+        id: 1,
+        mission: "Hora das compras! Para essa nova etapa é muito importante incorporar alimentos saudáveis à sua lista de compras e evitar guloseimas, alimentos processados e besteiras em geral.",
+        checkboxText: "Feito!",
+        coins: 15
+    },
+    {
+        id: 2,
+        mission: "Mão na massa! Vamos sair das mesmices do dia a dia. A missão de hoje é procurar uma receitar e preparar uma refeição saudável.",
+        checkboxText: "Feito!",
+        coins: 15
+    }
+]
+
+var level3BonusMissions = [
+    {
+        id: 1,
+        mission: "Acompanhamento nutricional pode ser o passo crucial para alcançar uma alimentação saudável e equilibrada. Por isso, a missão bônus de hoje é procurar um nutricionista.",
+        checkboxText: "Eu consegui!",
+        coins: 40
     }
 ]
 
@@ -112,9 +136,9 @@ var level1Text = "Meus hábitos alimentares sempre chamaram atenção no meu gru
 var level2Text = "As obrigações da vida de um guaxinim não são tão complexas assim. Quer dizer, a gente não tem que trabalhar, produzir e essas baboseiras todas que os humanos fazem, então a gente pode passar mais tempo junto com os outros guaxinins. Cada um tem seu jeito próprio de chamar atenção e fazer amizade, né? Eu não tinha o meu. Até os outros começarem a ver como eu comia e ficarem surpresos com as consequências inexistentes no meu corpo. Inexistentes… Pelo menos era o que eu pensava, né. Eu era o guaxinim descolado por comer lixo ao invés de frutas e essas coisas. Meus problemas de socialização foram resolvidos com o que eu mais gostava na vida: comer. Mas aí depois outros problemas foram criados no lugar."
 var level3Text = "No começo, me aproximei de um pessoal que tinha os mesmos hábitos que os meus. Depois, outros guaxinins curiosos viraram meus amigos. Era muito legal chamar atenção assim, sem fazer nada pra isso. Hoje em dia eu mudei, mas continuo chamando a atenção, claro. Sou o guaxinim mais descolado do meu bairro. A gente ia toda madrugada procurar o lixo que a gente chamava de comida, até o dia que eu percebi que tinha alguma coisa de errado comigo."
 
-var allFoodMissions = [level1Missions, level2Missions]
-var allFoodBonusMissions = [level1BonusMissions, level2BonusMissions]
-var allFoodLevelTexts = [level1Text, level2Text]
+var allFoodMissions = [level1Missions, level2Missions, level3Missions]
+var allFoodBonusMissions = [level1BonusMissions, level2BonusMissions, level3BonusMissions]
+var allFoodLevelTexts = [level1Text, level2Text, level3Text]
 
 var level1SocialNetworkMissions = [
     {
