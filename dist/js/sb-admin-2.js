@@ -256,7 +256,7 @@ var level1DisorganizationBonusMissions = [
     }
 ]
 
-var level1DisorganizationText = "outro texto pra Disorganization"
+var level1DisorganizationText = "\"Eu não sou desorganizado, estou apenas muito ocupado\" essa é a frase que mais repito durante o dia a dia, às vezes repito tanto isso que até parece que estou tentando me convencer disso mesmo, acho que me sinto assim porque sei que no fundo isso não é verdade. Foram tantas desculpas ao decorrer desses anos que eu não sei como parar e nem como recomeçar."
 
 var allDisorganizationMissions = [level1DisorganizationMissions]
 var allDisorganizationBonusMissions = [level1DisorganizationBonusMissions]
