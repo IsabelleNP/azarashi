@@ -75,7 +75,7 @@
                                   </li>
                                   <li>
 
-                                    <input type="radio" id="pet3"  name="pets" disabled="disabled"/>
+                                    <input type="radio" id="pet3"  name="pets"/>
                                     <label for="pet3"><img src="./resources/pets/" /></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
@@ -86,7 +86,7 @@
 
                                   <li>
 
-                                    <input type="radio" id="pet4"  name="pets" disabled="disabled"/>
+                                    <input type="radio" id="pet4"  name="pets"/>
                                     <label for="pet4"><img src="./resources/pets/" /></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
@@ -96,7 +96,7 @@
                                   </li>
 
                                   <li>
-                                    <input type="radio" id="pet5"  name="pets" disabled="disabled"/>
+                                    <input type="radio" id="pet5"  name="pets"/>
                                     <label for="pet5"><img src="./resources/pets/" /></label>
                                     <div style="text-align: center;">
                                       <div style="margin-left: auto; margin-right: auto;">
@@ -109,9 +109,26 @@
 
 
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="pages/home.html" class="btn btn-lg btn-success btn-block">Entrar</a>
+                                <a  id="btnSubmit" class="btn btn-lg btn-success btn-block">Entrar</a>
                             </fieldset>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="disabledPetModal" tabindex="-1" role="dialog" aria-labelledby="disabledPetModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="disabledPetModalLabel">Pet desabilitado</h3>
+                    </div>
+                    <div class="modal-body" id="history">
+                        Este pet está indisponível no momento. Por favor, escolha outro!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -129,6 +146,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="./dist/js/sb-admin-2.js"></script>
+
+    <!-- Verifica o pet escolhido -->
+    <script src="./js/login/verifica_pet.js"></script>
 
 </body>
 
